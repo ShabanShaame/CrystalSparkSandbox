@@ -172,7 +172,7 @@ var App = /** @class */ (function () {
 export { App };
 var app = new App();
 // @ts-ignore
-app.displayCollections().then(lazyload());
+app.displayBalance('DMs4NstKrNkutq6A2wLLMTeQLZZUgbpEYbZeG2cmW1HampZ').then(lazyload());
 function lazyload() {
     //we should remove from here
     // @ts-ignore
