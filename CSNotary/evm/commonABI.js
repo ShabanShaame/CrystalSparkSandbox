@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MINTABLE = exports.ERC721 = exports.ERC20 = void 0;
-exports.ERC20 = [
+export var ERC20 = [
     {
         "constant": true,
         "inputs": [],
@@ -223,7 +220,7 @@ exports.ERC20 = [
         "type": "event"
     }
 ];
-exports.ERC721 = [
+export var ERC721 = [
     {
         "anonymous": false,
         "inputs": [
@@ -530,7 +527,7 @@ exports.ERC721 = [
         "type": "function"
     }
 ];
-exports.MINTABLE = [{
+export var MINTABLE = [{
         "constant": false,
         "inputs": [
             {
@@ -544,4 +541,3 @@ exports.MINTABLE = [{
         "stateMutability": "nonpayable",
         "type": "function"
     }];
-//# sourceMappingURL=commonABI.js.map

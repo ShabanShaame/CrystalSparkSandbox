@@ -11,18 +11,15 @@
         "php": "^7.3|^8.0",
         "ext-json": "*",
         "everdreamsoft/crystal-spark-cannon": "dev-master",
-        "everdreamsoft/cs-account": "dev-master",
+
         "everdreamsoft/sandra": "dev-master",
-        "everdreamsoft/sog-cards": "dev-master",
+
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.5",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5",
-        "mixpanel/mixpanel-php": "dev-master",
-        "rap2hpoutre/laravel-log-viewer": "^1.7",
-        "yajra/laravel-datatables": "^1.0@dev"
+        "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

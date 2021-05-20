@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -48,11 +47,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChainNotaryEvm = void 0;
-var ChainNotaryBase_1 = require("../ChainNotaryBase");
-var commonABI_1 = require("./commonABI");
-var ChainParser_1 = require("./ChainParser");
+import { ChainNotaryBase } from "../ChainNotaryBase";
+import { ERC20, ERC721, MINTABLE } from "./commonABI";
+import { ChainParser } from "./ChainParser";
 var web3 = require('web3');
 require('dotenv').config();
 var Tx = require('ethereumjs-tx');
@@ -104,7 +101,7 @@ var ChainNotaryEvm = /** @class */ (function (_super) {
                     case 0:
                         subProvider = this.getWeb3Subprovider();
                         managerArgs = this.manager.arguments;
-                        contract = new subProvider.Contract(commonABI_1.ERC20, this.manager.arguments.contract, { gasLimit: 1000000 });
+                        contract = new subProvider.Contract(ERC20, this.manager.arguments.contract, { gasLimit: 1000000 });
                         _a = this;
                         return [4 /*yield*/, contract.methods.balanceOf(this.manager.arguments.to).call().then(function (data) {
                                 return { address: managerArgs.to, balance: data };
@@ -122,7 +119,7 @@ var ChainNotaryEvm = /** @class */ (function (_super) {
             var subProvider, contract;
             return __generator(this, function (_a) {
                 subProvider = this.getWeb3Subprovider();
-                contract = subProvider.Contract(commonABI_1.ERC721, this.manager.arguments.contract, { gasLimit: 1000000 });
+                contract = subProvider.Contract(ERC721, this.manager.arguments.contract, { gasLimit: 1000000 });
                 console.log(this.manager.arguments.tokenPath.tokenId);
                 console.log(this.manager.arguments.tokenPath);
                 contract.methods.ownerOf(this.manager.arguments.tokenPath.tokenId).call().then(console.log);
@@ -138,7 +135,7 @@ var ChainNotaryEvm = /** @class */ (function (_super) {
                 subProvider = this.getWeb3Subprovider();
                 sender = subProvider.accounts.wallet.add(this.convertPrivateKey(this.manager.arguments.key));
                 manager = this.manager;
-                contract = new subProvider.Contract(commonABI_1.MINTABLE, this.manager.arguments.contract, { gasLimit: 1000000 });
+                contract = new subProvider.Contract(MINTABLE, this.manager.arguments.contract, { gasLimit: 1000000 });
                 contract.methods.mintTo(this.manager.arguments.to).send({ from: sender.address, gas: '3000000' }).then(function (value) {
                     _this.response = value;
                 }).catch(function (e) {
@@ -155,10 +152,10 @@ var ChainNotaryEvm = /** @class */ (function (_super) {
     ChainNotaryEvm.prototype.contractStandardRouting = function (contractAddress, web3Internal) {
         if (typeof contractAddress == "undefined")
             return null;
-        var ABI = commonABI_1.ERC20;
+        var ABI = ERC20;
         this.contractInterface = ContractInterface.IERC20;
         if (this.manager.arguments.tokenPath && this.manager.arguments.tokenPath.tokenId) {
-            ABI = commonABI_1.ERC721;
+            ABI = ERC721;
             this.contractInterface = ContractInterface.IERC721;
         }
         return new web3Internal.Contract(ABI, contractAddress, { gasLimit: 1000000 });
@@ -189,8 +186,8 @@ var ChainNotaryEvm = /** @class */ (function (_super) {
     ChainNotaryEvm.prototype.chainParseTransactions = function () {
         var subprovider = this.getWeb3Subprovider();
         // @ts-ignore
-        var contract = new subprovider.Contract(commonABI_1.ERC721, this.manager.arguments.contract, { gasLimit: 1000000 });
-        var chainParser = new ChainParser_1.ChainParser();
+        var contract = new subprovider.Contract(ERC721, this.manager.arguments.contract, { gasLimit: 1000000 });
+        var chainParser = new ChainParser();
         chainParser.blockInterval = 10;
         var bootData = { fromBlock: 27991852, contract: contract };
         // bootData.toBlock = 27991853 ;
@@ -216,7 +213,7 @@ var ChainNotaryEvm = /** @class */ (function (_super) {
                     case 2:
                         _a.trys.push([2, 6, , 7]);
                         // @ts-ignore
-                        contract = new subprovider.Contract(commonABI_1.ERC20, this.manager.arguments.contract, { gasLimit: 1000000 });
+                        contract = new subprovider.Contract(ERC20, this.manager.arguments.contract, { gasLimit: 1000000 });
                         return [4 /*yield*/, contract.methods.decimals().call().then(function (data) { return data; })];
                     case 3:
                         decimals = _a.sent();
@@ -375,11 +372,10 @@ var ChainNotaryEvm = /** @class */ (function (_super) {
         });
     };
     return ChainNotaryEvm;
-}(ChainNotaryBase_1.ChainNotaryBase));
-exports.ChainNotaryEvm = ChainNotaryEvm;
+}(ChainNotaryBase));
+export { ChainNotaryEvm };
 var ContractInterface;
 (function (ContractInterface) {
     ContractInterface["IERC20"] = "IERC20";
     ContractInterface["IERC721"] = "IERC721";
 })(ContractInterface || (ContractInterface = {}));
-//# sourceMappingURL=ChainNotary.js.map

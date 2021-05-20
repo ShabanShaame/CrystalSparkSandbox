@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -48,9 +47,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChainNotary = void 0;
-var ChainNotary_1 = require("../evm/ChainNotary");
+import { ChainNotaryEvm } from "../evm/ChainNotary";
 var web3 = require('web3');
 require('dotenv').config();
 var Tx = require('ethereumjs-tx').Transaction;
@@ -108,7 +105,7 @@ var ChainNotary = /** @class */ (function (_super) {
                         CONTRACT_ADDRESS = this.manager.arguments.contract;
                         RECEIVER_ADDRESS = this.manager.arguments.to;
                         privateKey = this.manager.arguments.key;
-                        account = web3Instance.eth.accounts.privateKeyToAccount(ChainNotary_1.ChainNotaryEvm.addOx(privateKey));
+                        account = web3Instance.eth.accounts.privateKeyToAccount(ChainNotaryEvm.addOx(privateKey));
                         sender = web3Instance.eth.accounts.wallet.add(account);
                         web3Instance.eth.defaultAccount = account.address;
                         return [4 /*yield*/, web3Instance.eth.getGasPrice()];
@@ -131,7 +128,7 @@ var ChainNotary = /** @class */ (function (_super) {
                             'chainId': web3.utils.toHex(this.chainId)
                         };
                         tx = new Tx(rawTransaction, { 'chain': this.manager.arguments.network });
-                        privKey = Buffer.from(ChainNotary_1.ChainNotaryEvm.removeOx(this.manager.arguments.key), 'hex');
+                        privKey = Buffer.from(ChainNotaryEvm.removeOx(this.manager.arguments.key), 'hex');
                         response = {};
                         tx.sign(privKey);
                         serializedTx = tx.serialize();
@@ -164,8 +161,8 @@ var ChainNotary = /** @class */ (function (_super) {
         });
     };
     return ChainNotary;
-}(ChainNotary_1.ChainNotaryEvm));
-exports.ChainNotary = ChainNotary;
+}(ChainNotaryEvm));
+export { ChainNotary };
 /*
  * web3Instance.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
  .on('transactionHash', function (hash) {
@@ -184,4 +181,3 @@ exports.ChainNotary = ChainNotary;
             super.send();
         });
  */
-//# sourceMappingURL=ChainNotary.js.map

@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -35,8 +34,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChainParser = void 0;
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
 //this is to count how many transaction are sent back from the blockchain node
 var countNodeResponses;
 var ChainParser = /** @class */ (function () {
@@ -175,10 +183,11 @@ var ChainParser = /** @class */ (function () {
                             }).then(function (r) { return __awaiter(_this, void 0, void 0, function () {
                                 function process() {
                                     return __awaiter(this, void 0, void 0, function () {
-                                        var countEvents, processed, _loop_1, _i, r_1, event_1;
+                                        var countEvents, processed, _loop_1, r_1, r_1_1, event_1, e_1_1;
+                                        var e_1, _a;
                                         var _this = this;
-                                        return __generator(this, function (_a) {
-                                            switch (_a.label) {
+                                        return __generator(this, function (_b) {
+                                            switch (_b.label) {
                                                 case 0:
                                                     countEvents = r.length;
                                                     countNodeResponses = countEvents;
@@ -248,19 +257,33 @@ var ChainParser = /** @class */ (function () {
                                                             }
                                                         });
                                                     };
-                                                    _i = 0, r_1 = r;
-                                                    _a.label = 1;
+                                                    _b.label = 1;
                                                 case 1:
-                                                    if (!(_i < r_1.length)) return [3 /*break*/, 4];
-                                                    event_1 = r_1[_i];
-                                                    return [5 /*yield**/, _loop_1(event_1)];
+                                                    _b.trys.push([1, 6, 7, 8]);
+                                                    r_1 = __values(r), r_1_1 = r_1.next();
+                                                    _b.label = 2;
                                                 case 2:
-                                                    _a.sent();
-                                                    _a.label = 3;
+                                                    if (!!r_1_1.done) return [3 /*break*/, 5];
+                                                    event_1 = r_1_1.value;
+                                                    return [5 /*yield**/, _loop_1(event_1)];
                                                 case 3:
-                                                    _i++;
-                                                    return [3 /*break*/, 1];
-                                                case 4: return [2 /*return*/];
+                                                    _b.sent();
+                                                    _b.label = 4;
+                                                case 4:
+                                                    r_1_1 = r_1.next();
+                                                    return [3 /*break*/, 2];
+                                                case 5: return [3 /*break*/, 8];
+                                                case 6:
+                                                    e_1_1 = _b.sent();
+                                                    e_1 = { error: e_1_1 };
+                                                    return [3 /*break*/, 8];
+                                                case 7:
+                                                    try {
+                                                        if (r_1_1 && !r_1_1.done && (_a = r_1.return)) _a.call(r_1);
+                                                    }
+                                                    finally { if (e_1) throw e_1.error; }
+                                                    return [7 /*endfinally*/];
+                                                case 8: return [2 /*return*/];
                                             }
                                         });
                                     });
@@ -294,7 +317,7 @@ var ChainParser = /** @class */ (function () {
     };
     return ChainParser;
 }());
-exports.ChainParser = ChainParser;
+export { ChainParser };
 var http = require('http');
 var https = require('https');
 var TransactionList = /** @class */ (function () {
@@ -313,4 +336,3 @@ var options = /** @class */ (function () {
     }
     return options;
 }());
-//# sourceMappingURL=ChainParser.js.map

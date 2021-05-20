@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var app_js_1 = require("./app.js");
-var CSCanonizeManager_1 = require("canonizer/src/canonizer/CSCanonizeManager");
-var app = new app_js_1.App();
+import { App } from "./app.js";
+import { CSCanonizeManager } from "../node_module/canonizer/src/canonizer/CSCanonizeManager";
+var app = new App();
 // @ts-ignore
 if (page === 'home') {
     app.displayCollections().then(function (r) { lazyload(); });
@@ -69,7 +67,7 @@ function displayAddress(address) {
 function removeMintLink() {
     $(".addressLink").text(function (index, value) {
         value = value.replace(/\s/g, '');
-        if (value == CSCanonizeManager_1.CSCanonizeManager.mintIssuerAddressString) {
+        if (value == CSCanonizeManager.mintIssuerAddressString) {
             $(this).text("MINT");
             $(this).contents().unwrap();
             return "mint";
@@ -103,4 +101,3 @@ function lazyload() {
     }); //reload lazy
     console.log("lazyload instanciated");
 }
-//# sourceMappingURL=viewListener.js.map

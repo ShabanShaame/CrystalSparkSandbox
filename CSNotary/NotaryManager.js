@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.NotaryManager = void 0;
 var argv = require('minimist')(process.argv.slice(2), {
     string: ['from', 'contract', 'to', 'key'],
     int: ['quantity'] // --lang xml
@@ -56,7 +53,8 @@ var NotaryManager = /** @class */ (function () {
         }
         if (argv.chain == 'bitcoin')
             argv.chain = 'counterparty'; // hack to push counterpaty
-        Promise.resolve().then(function () { return require("./" + argv.chain + "/ChainNotary"); }).then(function (notary) {
+        import("./" + argv.chain + "/ChainNotary")
+            .then(function (notary) {
             var my = new notary.ChainNotary(_this);
             _this.response.meta.chain = _this.arguments.network;
             if (_this.arguments.legacy == 'false') {
@@ -118,7 +116,7 @@ var NotaryManager = /** @class */ (function () {
     };
     return NotaryManager;
 }());
-exports.NotaryManager = NotaryManager;
+export { NotaryManager };
 var CSNResponse = /** @class */ (function () {
     function CSNResponse(status, message) {
         this.meta = { version: 0.1, chain: 'unknown' };
@@ -143,4 +141,3 @@ var CSNstatus;
     CSNstatus["ok"] = "ok";
     CSNstatus["error"] = "error";
 })(CSNstatus || (CSNstatus = {}));
-//# sourceMappingURL=NotaryManager.js.map

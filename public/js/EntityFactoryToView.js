@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.EntityFactoryToView = void 0;
 var EntityFactoryToView = /** @class */ (function () {
     function EntityFactoryToView() {
     }
@@ -59,5 +56,4 @@ var EntityFactoryToView = /** @class */ (function () {
     };
     return EntityFactoryToView;
 }());
-exports.EntityFactoryToView = EntityFactoryToView;
-//# sourceMappingURL=EntityFactoryToView.js.map
+export { EntityFactoryToView };

@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -48,9 +47,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChainNotary = void 0;
-var ChainNotary_1 = require("../evm/ChainNotary");
+import { ChainNotaryEvm } from "../evm/ChainNotary";
 var Caver = require('caver-js');
 require('dotenv').config({ path: '../../../' });
 var Tx = require('ethereumjs-tx').Transaction;
@@ -125,6 +122,5 @@ var ChainNotary = /** @class */ (function (_super) {
         });
     };
     return ChainNotary;
-}(ChainNotary_1.ChainNotaryEvm));
-exports.ChainNotary = ChainNotary;
-//# sourceMappingURL=ChainNotary.js.map
+}(ChainNotaryEvm));
+export { ChainNotary };

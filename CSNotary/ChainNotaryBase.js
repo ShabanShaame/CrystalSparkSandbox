@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChainNotaryBase = void 0;
 var ChainNotaryBase = /** @class */ (function () {
     function ChainNotaryBase(manager) {
         this.manager = null;
@@ -52,5 +49,4 @@ var ChainNotaryBase = /** @class */ (function () {
     };
     return ChainNotaryBase;
 }());
-exports.ChainNotaryBase = ChainNotaryBase;
-//# sourceMappingURL=ChainNotaryBase.js.map
+export { ChainNotaryBase };
