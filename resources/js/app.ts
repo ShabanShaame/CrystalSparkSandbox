@@ -124,6 +124,10 @@ export class App {
 
 }
 
+console.log("hello console");
+
+var app = new App();
+
 
 
 

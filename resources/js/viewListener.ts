@@ -2,19 +2,13 @@
 import {App} from "./app.js";
 import {CSCanonizeManager} from "canonizer/src/canonizer/CSCanonizeManager";
 
+console.log("hello console");
+
 var app = new App();
 // @ts-ignore
-if (page === 'home') {
-    app.displayCollections().then(r => {lazyload()});
-    app.displayLastActiveAccounts().then(eventFactory => {
-        console.log("we got event factory")
-        app.displayLatestAssets(eventFactory).then(eventFactory => { convertTimestamp();});
 
 
-    });
 
-
-}
 // @ts-ignore
 if (page === 'assetList') {
     let collectionId = findGetParameter('collectionId')

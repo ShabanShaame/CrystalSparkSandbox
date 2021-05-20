@@ -16,11 +16,16 @@ mix.webpackConfig({
     node: {
         fs: "empty"
     },
-    externals: ["fs"],
+    externals: [
+        "fs",
+        {
+            xmlhttprequest: '{XMLHttpRequest:XMLHttpRequest}'
+        }
+    ],
 
     resolve: {
         alias: {
-            "xmlhttprequest" : "XMLHttpRequest"
+            jquery: "./vendor/jquery/jquery.js",
         }
     },
 });

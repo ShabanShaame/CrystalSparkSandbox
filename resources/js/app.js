@@ -168,3 +168,5 @@ var App = /** @class */ (function () {
     return App;
 }());
 export { App };
+console.log("hello console");
+var app = new App();

@@ -1,6 +1,9 @@
 
 import {EntityFactory} from "canonizer/src/EntityFactory.js";
 import {Entity} from "canonizer/src/Entity.js";
+import $ from "jquery";
+
+
 
 export class EntityFactoryToView{
 
