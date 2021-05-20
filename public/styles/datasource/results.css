@@ -1,0 +1,29 @@
+
+.tab-pane{
+    height: 500px;
+    overflow-y:scroll;
+}
+
+.jsonContent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 10vh;
+    padding-left: 5%;
+}
+
+.spinner-border{
+    margin: auto;
+}
+
+.navItem{
+    background-color: #717882;
+}
+
+.navItem.active{
+    background-color: #343a40 !important;
+}
+
+.nav-tabs{
+    border-bottom: none !important;
+}

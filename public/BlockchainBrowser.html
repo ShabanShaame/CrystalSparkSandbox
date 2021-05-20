@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="../../../../global_assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="../../../../global_assets/js/main/jquery.min.js"></script>
+	<script src="../../../../global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/ripple.min.js"></script>
+	<!-- /core JS files -->
+
+	<script src="bitCrystalsExplore.js"></script>
+
+	<!-- Theme JS files -->
+	<script src="../../../../global_assets/js/plugins/visualization/echarts/echarts.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/fullcalendar/fullcalendar.min.js"></script>
+
+	<script src="assets/js/app.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/user_pages_profile.js"></script>
+
+	<!-- /theme JS files -->
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-component-toggle" type="button">
+				<i class="icon-unfold"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+
+
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-component-toggle d-none d-md-block">
+						<i class="icon-drag-right"></i>
+					</a>
+				</li>
+			</ul>
+
+
+
+			<ul class="navbar-nav ml-md-auto">
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-make-group mr-2"></i>
+						Social Share
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+						<div class="dropdown-content-body p-2">
+							<div class="row no-gutters">
+								<div class="col-12 col-sm-4">
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-github4 icon-2x"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Github</div>
+									</a>
+
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-dropbox text-blue-400 icon-2x"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Dropbox</div>
+									</a>
+								</div>
+								
+								<div class="col-12 col-sm-4">
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-dribbble3 text-pink-400 icon-2x"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Dribbble</div>
+									</a>
+
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-google-drive text-success-400 icon-2x"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Drive</div>
+									</a>
+								</div>
+
+								<div class="col-12 col-sm-4">
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-twitter text-info-400 icon-2x"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Twitter</div>
+									</a>
+
+									<a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
+										<i class="icon-youtube text-danger icon-2x"></i>
+										<div class="font-size-sm font-weight-semibold text-uppercase mt-2">Youtube</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-pulse2 mr-2"></i>
+						Activity
+					</a>
+					
+					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+						<div class="dropdown-content-header">
+							<span class="font-size-sm line-height-sm text-uppercase font-weight-semibold">Latest activity</span>
+							<a href="#" class="text-default"><i class="icon-search4 font-size-base"></i></a>
+						</div>
+
+						<!--<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-success-400 rounded-round btn-icon"><i class="icon-mention"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">Taylor Swift</a> mentioned you in a post "Angular JS. Tips and tricks"
+										<div class="font-size-sm text-muted mt-1">4 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-pink-400 rounded-round btn-icon"><i class="icon-paperplane"></i></a>
+									</div>
+									
+									<div class="media-body">
+										Special offers have been sent to subscribed users by <a href="#">Donna Gordon</a>
+										<div class="font-size-sm text-muted mt-1">36 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-blue rounded-round btn-icon"><i class="icon-plus3"></i></a>
+									</div>
+									
+									<div class="media-body">
+										<a href="#">Chris Arney</a> created a new <span class="font-weight-semibold">Design</span> branch in <span class="font-weight-semibold">Limitless</span> repository
+										<div class="font-size-sm text-muted mt-1">2 hours ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-purple-300 rounded-round btn-icon"><i class="icon-truck"></i></a>
+									</div>
+									
+									<div class="media-body">
+										Shipping cost to the Netherlands has been reduced, database updated
+										<div class="font-size-sm text-muted mt-1">Feb 8, 11:30</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-warning-400 rounded-round btn-icon"><i class="icon-comment"></i></a>
+									</div>
+									
+									<div class="media-body">
+										New review received on <a href="#">Server side integration</a> services
+										<div class="font-size-sm text-muted mt-1">Feb 2, 10:20</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-teal-400 rounded-round btn-icon"><i class="icon-spinner11"></i></a>
+									</div>
+									
+									<div class="media-body">
+										<strong>January, 2018</strong> - 1320 new users, 3284 orders, $49,390 revenue
+										<div class="font-size-sm text-muted mt-1">Feb 1, 05:46</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						-->
+
+						<div class="dropdown-content-footer bg-light">
+							<a href="#" class="font-size-sm line-height-sm text-uppercase font-weight-semibold text-grey mr-auto">All activity</a>
+							<div>
+								<a href="#" class="text-grey" data-popup="tooltip" title="Clear list"><i class="icon-checkmark3"></i></a>
+								<a href="#" class="text-grey ml-2" data-popup="tooltip" title="Settings"><i class="icon-gear"></i></a>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link">
+						<i class="icon-switch2"></i>
+						<span class="d-md-none ml-2">Logout</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light border-bottom-0">
+
+				
+
+			
+				<!-- Page header content -->
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+					  <h4><em class="icon-arrow-left52 mr-2"></em><span class="font-weight-semibold">Wallet :</span> - <span id="mainBrowsing"> 1KacrYMuQW5eqLbrYUotQ1mdsVpxin6hC9</span></h4>
+					  <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<div class="header-elements d-none">
+						<div class="d-flex justify-content-center">
+							<div class="input-group mb-6">
+								<div class="form-group-feedback form-group-feedback-left">
+									<input id="searchField" type="text" class="form-control form-control-lg alpha-grey" value="" placeholder="Search" size="44">
+									<div class="form-control-feedback form-control-feedback-lg">
+										<i class="icon-search4 text-muted"></i>
+									</div>
+								</div>
+
+								<div class="input-group-append">
+									<button type="submit" class="btn btn-primary btn-lg" id="searchButton">Search</button>
+								</div>
+							</div>
+							
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- /page header content -->
+
+
+				<!-- Profile navigation -->
+				<div class="navbar navbar-expand-lg navbar-light bg-light border-top">
+					<div class="text-center d-lg-none w-100">
+						<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-second">
+							<i class="icon-menu7 mr-2"></i>
+							Profile navigation
+						</button>
+					</div>
+
+					<div class="navbar-collapse collapse" id="navbar-second">
+						<ul class="nav navbar-nav">
+							<li class="nav-item">
+								<a href="#activity" class="navbar-nav-link active" data-toggle="tab"><em class="icon-menu7 mr-2"></em> Collectibles &nbsp; &nbsp; &nbsp; &nbsp; </a>
+							</li>
+							<li class="nav-item">
+								<a href="#schedule" class="navbar-nav-link" data-toggle="tab"><em class="icon-calendar3 mr-2"></em> Transactions &nbsp; &nbsp; &nbsp; &nbsp; <span class="badge badge-pill bg-success position-static ml-auto ml-lg-2">32</span></a>
+							</li>
+
+						</ul>
+<!--
+						<ul class="navbar-nav ml-lg-auto">
+							<li class="nav-item">
+								<a href="#" class="navbar-nav-link"><em class="icon-stack-text mr-2"></em> Notes </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="navbar-nav-link">
+									<i class="icon-collaboration mr-2"></i>
+									Friends
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="navbar-nav-link">
+									<i class="icon-images3 mr-2"></i>
+									Photos
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+									<i class="icon-gear"></i>
+									<span class="d-lg-none ml-2">Settings</span>
+								</a>
+
+								<div class="dropdown-menu dropdown-menu-right">
+									<a href="#" class="dropdown-item"><i class="icon-image2"></i> Update cover</a>
+									<a href="#" class="dropdown-item"><i class="icon-clippy"></i> Update info</a>
+									<a href="#" class="dropdown-item"><i class="icon-make-group"></i> Manage sections</a>
+									<div class="dropdown-divider"></div>
+									<a href="#" class="dropdown-item"><i class="icon-three-bars"></i> Activity log</a>
+									<a href="#" class="dropdown-item"><i class="icon-cog5"></i> Profile settings</a>
+								</div>
+							</li>
+						</ul>
+						-->
+					</div>
+				</div>
+				<!-- /profile navigation -->
+
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+
+				<!-- Inner container -->
+				<div class="d-flex align-items-start flex-column flex-md-row">
+
+					<!-- Left content -->
+					<div class="tab-content w-100 overflow-auto order-2 order-md-1">
+
+						<div class="tab-pane fade active show" id="activity">
+
+							<div id="hiddableAssetTemplate">
+								<div id="collectionTitle" class="row">
+									<div  class="card card-body bg-pink-400" style="background-image: url(../../../../global_assets/images/backgrounds/panel_bg.png);">
+										<div class="media">
+											<div class="mr-3 align-self-center">
+												<i class="icon-stack icon-2x"></i>
+											</div>
+
+											<div class="media-body text-left">
+												<h6 class="media-title font-weight-semibold collectionName">Collection Name</h6>
+												<span class="opacity-75 collectionDescription">Collection description</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+								<div class="col-sm-4 col-xl-2" id="assetItem">
+									<div class="card">
+										<div class="card-img-actions mx-1 mt-1">
+											<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+												<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+										</div>
+
+										<div class="card-body">
+											<div class="d-flex align-items-start flex-nowrap">
+												<div>
+													<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+													<span class="font-size-sm text-muted">Supply : </span>
+												</div>
+
+												<div class="list-icons list-icons-extended ml-auto">
+													<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+													<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+							</div>
+								<div class="row">
+									<div class="col-sm-4 col-xl-2" id="assetItem">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+
+									<div class="col-sm-4 col-xl-2" id="assetItemX">
+										<div class="card">
+											<div class="card-img-actions mx-1 mt-1">
+												<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="1000" class="imageFull">
+													<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="200" class="card-img img-fluid imageThumb"></a></span>
+
+
+											</div>
+
+											<div class="card-body">
+												<div class="d-flex align-items-start flex-nowrap">
+													<div>
+														<div class="font-weight-semibold mr-2 assetName" >Asset name</div>
+														<span class="font-size-sm text-muted">Supply : </span>
+													</div>
+
+													<div class="list-icons list-icons-extended ml-auto">
+														<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
+														<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+								</div>
+							</div>
+
+
+
+							<div  id="dynamicAssets">
+
+<div></div>
+
+
+
+
+
+
+
+
+
+							</div>
+
+					    </div>
+
+					    <div class="tab-pane fade" id="schedule">
+							<div class="row" id="hiddableTransactionTemplate">
+							
+							<!-- transaction box -->
+							<div class="card card-body col-md-12 col-lg-12 col-xl-12" id="transactionItem">
+							<div class="media">
+								<div class="mr-3">
+									<span class="image">
+										<a data-fancybox="gallery" href="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="100" class="imageFull"><img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"  height="100" class="imageThumb"></a></span>
+									<!--<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"   height="100" alt=""></span>-->
+
+								</div>
+
+								<div class="media-body">
+								  <h6 class="mb-0"><span id="TransactionTitle" class="test" >Received</span></h6>
+								  <span class="text-muted" >From :&nbsp; <span class="fromAddress">19QWXpMXeLkoEKEJv2xo9rn8wkPCyxACSX</span></span>
+								</div>
+								
+								
+
+								<div class="ml-3 align-self-end">
+									<div class="list-icons"> +<span class="assetQuantity">1</span> <span class="assetName">SATOSHICARD</span>
+									  
+			                    	</div>
+								</div>
+							</div>
+
+						</div>
+							<!-- Transaction box -->
+
+
+
+							<!-- transaction box -->
+
+							<div class="card card-body" id="transactionItemT">
+								<div class="media">
+									<div class="mr-3">
+										<a href="#"><span class="image">
+									<img src="https://sandra.everdreamsoft.com/images/bitgirls/TSUKASAVIX_358x500.png?v0.37"   height="100" alt=""></span>
+										</a>
+									</div>
+
+									<div class="media-body">
+										<h6 class="mb-0"><span id="TransactionTitleX" class="test" >Received X</span></h6>
+										<span class="text-muted" >From :&nbsp; <span class="fromAddress">19QWXpMXeLkoEKEJv2xo9rn8wkPCyxACSX</span>
+									</div>
+
+
+
+									<div class="ml-3 align-self-end">
+										<div class="list-icons"> +<span class="assetQuantity">1</span> <span class="assetName">SATOSHICARD</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-white d-flex justify-content-between align-items-center">
+									<div class="text-muted"><i class="icon-spinner2 spinner mr-2"></i> Processing...</div>
+
+									<div class="progress w-100 w-sm-auto wmin-sm-200 mt-2 mt-sm-0" style="height: 0.375rem;">
+										<div class="progress-bar bg-indigo-400 progress-bar-striped progress-bar-animated" style="width: 60%;">
+											<span class="sr-only">60% Complete</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+							<!-- Transaction box -->
+
+							<div class="row" id="dynamicTransactions">
+
+							</div>
+
+							
+
+				    	</div>
+
+
+
+
+					    <div class="tab-pane fade" id="settings">
+
+							<!-- Profile info -->
+							<div class="card">
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title">Profile information</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+					                		<a class="list-icons-item" data-action="collapse"></a>
+					                		<a class="list-icons-item" data-action="reload"></a>
+					                		<a class="list-icons-item" data-action="remove"></a>
+					                	</div>
+				                	</div>
+								</div>
+
+								<div class="card-body">
+									<form action="#">
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label>Username</label>
+													<input type="text" value="Eugene" class="form-control">
+												</div>
+												<div class="col-md-6">
+													<label>Full name</label>
+													<input type="text" value="Kopyov" class="form-control">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label>Address line 1</label>
+													<input type="text" value="Ring street 12" class="form-control">
+												</div>
+												<div class="col-md-6">
+													<label>Address line 2</label>
+													<input type="text" value="building D, flat #67" class="form-control">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-4">
+													<label>City</label>
+													<input type="text" value="Munich" class="form-control">
+												</div>
+												<div class="col-md-4">
+													<label>State/Province</label>
+													<input type="text" value="Bayern" class="form-control">
+												</div>
+												<div class="col-md-4">
+													<label>ZIP code</label>
+													<input type="text" value="1031" class="form-control">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label>Email</label>
+													<input type="text" readonly="readonly" value="eugene@kopyov.com" class="form-control">
+												</div>
+												<div class="col-md-6">
+						                            <label>Your country</label>
+						                            <select class="form-control form-control-select2" data-fouc>
+						                                <option value="germany" selected>Germany</option> 
+						                                <option value="france">France</option> 
+						                                <option value="spain">Spain</option> 
+						                                <option value="netherlands">Netherlands</option> 
+						                                <option value="other">...</option> 
+						                                <option value="uk">United Kingdom</option> 
+						                            </select>
+												</div>
+											</div>
+										</div>
+
+				                        <div class="form-group">
+				                        	<div class="row">
+				                        		<div class="col-md-6">
+													<label>Phone #</label>
+													<input type="text" value="+99-99-9999-9999" class="form-control">
+													<span class="form-text text-muted">+99-99-9999-9999</span>
+				                        		</div>
+
+												<div class="col-md-6">
+													<label>Upload profile image</label>
+				                                    <input type="file" class="form-input-styled" data-fouc>
+				                                    <span class="form-text text-muted">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
+												</div>
+				                        	</div>
+				                        </div>
+
+				                        <div class="text-right">
+				                        	<button type="submit" class="btn btn-primary">Save changes</button>
+				                        </div>
+									</form>
+								</div>
+							</div>
+							<!-- /profile info -->
+
+
+							<!-- Account settings -->
+							<div class="card">
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title">Account settings</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+					                		<a class="list-icons-item" data-action="collapse"></a>
+					                		<a class="list-icons-item" data-action="reload"></a>
+					                		<a class="list-icons-item" data-action="remove"></a>
+					                	</div>
+				                	</div>
+								</div>
+
+								<div class="card-body">
+									<form action="#">
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label>Username</label>
+													<input type="text" value="Kopyov" readonly="readonly" class="form-control">
+												</div>
+
+												<div class="col-md-6">
+													<label>Current password</label>
+													<input type="password" value="password" readonly="readonly" class="form-control">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label>New password</label>
+													<input type="password" placeholder="Enter new password" class="form-control">
+												</div>
+
+												<div class="col-md-6">
+													<label>Repeat password</label>
+													<input type="password" placeholder="Repeat new password" class="form-control">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label>Profile visibility</label>
+
+													<div class="form-check">
+														<label class="form-check-label">
+															<input type="radio" name="visibility" class="form-input-styled" checked data-fouc>
+															Visible to everyone
+														</label>
+													</div>
+
+													<div class="form-check">
+														<label class="form-check-label">
+															<input type="radio" name="visibility" class="form-input-styled" data-fouc>
+															Visible to friends only
+														</label>
+													</div>
+
+													<div class="form-check">
+														<label class="form-check-label">
+															<input type="radio" name="visibility" class="form-input-styled" data-fouc>
+															Visible to my connections only
+														</label>
+													</div>
+
+													<div class="form-check">
+														<label class="form-check-label">
+															<input type="radio" name="visibility" class="form-input-styled" data-fouc>
+															Visible to my colleagues only
+														</label>
+													</div>
+												</div>
+
+												<div class="col-md-6">
+													<label>Notifications</label>
+
+													<div class="form-check">
+														<label class="form-check-label">
+															<input type="checkbox" class="form-input-styled" checked data-fouc>
+															Password expiration notification
+														</label>
+													</div>
+
+													<div class="form-check">
+														<label class="form-check-label">
+															<input type="checkbox" class="form-input-styled" checked data-fouc>
+															New message notification
+														</label>
+													</div>
+
+													<div class="form-check">
+														<label class="form-check-label">
+															<input type="checkbox" class="form-input-styled" checked data-fouc>
+															New task notification
+														</label>
+													</div>
+
+													<div class="form-check">
+														<label class="form-check-label">
+															<input type="checkbox" class="form-input-styled">
+															New contact request notification
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+
+				                        <div class="text-right">
+				                        	<button type="submit" class="btn btn-primary">Save changes</button>
+				                        </div>
+			                        </form>
+								</div>
+							</div>
+							<!-- /account settings -->
+
+				    	</div>
+					</div>
+					<!-- /left content -->
+
+
+					<!-- Right sidebar component -->
+					<div class="sidebar sidebar-light bg-transparent sidebar-component sidebar-component-right wmin-300 border-0 shadow-0 order-1 order-md-2 sidebar-expand-md">
+
+						<!-- Sidebar content -->
+						<div class="sidebar-content">
+
+							<!-- User card -->
+							<div class="card">
+								<div class="card-body text-center">
+									<div class="card-img-actions d-inline-block mb-3">
+										<img class="img-fluid rounded-circle" src="../../../../global_assets/images/placeholders/placeholder.jpg" width="170" height="170" alt="">
+										<div class="card-img-actions-overlay card-img rounded-circle">
+											<a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round">
+												<i class="icon-plus3"></i>
+											</a>
+											<a href="user_pages_profile.html" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
+												<i class="icon-link"></i>
+											</a>
+										</div>
+									</div>
+
+						    		<h6 class="font-weight-semibold mb-0">Blockchain Address</h6>
+									<span class="d-block text-muted mainBrowsing">0xe047fdff3d2a9b3af6834aecd67b30a16d3cb14e</span>
+
+
+									<div class="list-icons list-icons-extended mt-3">
+				                    	<a href="#" class="list-icons-item" data-popup="tooltip" title="Google Drive" data-container="body"><i class="icon-google-drive"></i></a>
+				                    	<a href="#" class="list-icons-item" data-popup="tooltip" title="Twitter" data-container="body"><i class="icon-twitter"></i></a>
+				                    	<a href="#" class="list-icons-item" data-popup="tooltip" title="Github" data-container="body"><i class="icon-github"></i></a>
+			                    	</div>
+						    	</div>
+					    	</div>
+					    	<!-- /user card -->
+
+
+							<!-- Navigation -->
+							<div class="card">
+								<div class="card-header bg-transparent header-elements-inline">
+									<span class="card-title font-weight-semibold">Navigation</span>
+									<div class="header-elements">
+										<div class="list-icons">
+					                		<a class="list-icons-item" data-action="collapse"></a>
+				                		</div>
+			                		</div>
+								</div>
+
+								<div  class="card-body p-0">
+									<ul id="collectionFilter" class="nav nav-sidebar my-2">
+										<li id="collectionFilterElement" class="nav-item">
+											<a href="#" class="nav-link filterCollection" collectionId="all">
+												<i class="icon-stack"></i>
+												<div class="collectionName">All Collections</div>
+												<span class="badge bg-blue badge-pill ml-auto itemCount">0</span>
+											</a>
+										</li>
+
+
+									</ul>
+								</div>
+							</div>
+							<!-- /navigation -->
+
+
+
+
+
+
+
+
+
+						</div>
+						<!-- /sidebar content -->
+
+					</div>
+					<!-- /right sidebar component -->
+
+				</div>
+
+				<!-- /inner container -->
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer --><!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+
+
+	<!-- /page content -->
+	
+	<script>
+		
+	$( document ).ready(function() {
+
+
+        function findGetParameter(parameterName) {
+            var result = null,
+                tmp = [];
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(function (item) {
+                    tmp = item.split("=");
+                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                });
+            return result;
+        }
+
+       var testnet = findGetParameter('testnet') ;
+        setCurrentAddress('1mzm8NqodUuuxip3uSoDrXraCXkmmwDcq');
+
+
+	    //setCurrentAddress('1mzm8NqodUuuxip3uSoDrXraCXkmmwDcq');
+
+
+	    //$('#hiddableTransactionTemplate').hide();
+
+
+	    //We hide template builder
+        //$('#schedule').append(new_panel);
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+
+
+
+
+	
+	
+	
+	
+	</script>
+
+</body>
+</html>

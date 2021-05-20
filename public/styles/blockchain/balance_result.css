@@ -1,0 +1,10 @@
+.contractsList{
+    font-weight: bold;
+    border-radius: 10px;
+    padding-top: 10px;
+    display: none;
+}
+
+.contractButton{
+    box-shadow: 1px 1px 5px #ffc107;
+}

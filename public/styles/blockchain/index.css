@@ -1,0 +1,32 @@
+#blockchain_choose{
+    background-image: url('https://www.pgconnects.com/london/wp-content/uploads/sites/4/2018/01/photo-Shaban-Shaame.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.opacityClass{
+    opacity : 0.5;
+}
+
+.alertFunctions{
+    display: none;
+}
+
+#jsonAlert{
+    display: none;
+}
+
+#selectNet{
+    visibility: hidden;
+}
+
+.spinner-grow{
+    display: none;
+    margin-left: 45%;
+}
+
+#infoIcon{
+    margin-left: 5%;
+    width: 20px;
+    height: 20px;
+}

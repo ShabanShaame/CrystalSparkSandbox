@@ -1,0 +1,17 @@
+{
+  "chain": {
+    "ethereum": {
+      "network": {
+        "mainet":{
+          "httpProvider": "https://mainnet.infura.io/v3/${key}",
+          "key": "a6e34ed067c74f25ba705456d73a471e"
+        }
+      }
+
+
+
+    }
+  }
+
+
+}

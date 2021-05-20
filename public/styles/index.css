@@ -1,0 +1,37 @@
+#buttons {
+    padding-top: 100px;
+}
+
+.mainPage {
+    font-weight: bold;
+}
+
+#br {
+    background: #F9EEBF;
+    height: 2px;
+    width: 60%;
+    margin: auto;
+    margin-top: 75px;
+    
+}
+
+#cscFunctions,
+#blockchainDatasources {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.alertFunctions{
+    height: 25%;
+}
+
+.buttonShow{
+    width: 120%;
+}
+
+footer{
+    display: none;
+}

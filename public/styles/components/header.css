@@ -1,0 +1,16 @@
+a{
+    padding-right: 0 !important;
+}
+
+#homeIcon{
+    height: 25px;
+    width: 25px;
+}
+
+#homeMenu{
+    color: white;
+}
+
+.eDsWarning{
+    color: #f0ad4e;
+}
