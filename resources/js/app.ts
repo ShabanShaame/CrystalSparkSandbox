@@ -14,7 +14,7 @@ export class App {
 
     public constructor() {
         let canonizeManager = new CSCanonizeManager();
-        let apiUrl = 'https://localhost:8000/';
+        let apiUrl = 'https://ksmjetski.everdreamsoft.com/';
 
         try{
             // @ts-ignore
@@ -89,6 +89,7 @@ export class App {
 
     public async displayLastActiveAccounts(){
 
+        console.log(this.apiManager);
         let eventFactory = await this.apiManager.getEvents();
         eventFactory.entityArray = eventFactory.entityArray.slice(0,10);
 
@@ -124,9 +125,33 @@ export class App {
 
 }
 
-console.log("hello console");
 
-var app = new App();
+
+const app = new App();
+// @ts-ignore
+app.displayCollections().then(  lazyload());
+
+
+function lazyload(){
+
+
+    //we should remove from here
+    // @ts-ignore
+    $('.lazy').Lazy({
+
+        visibleOnly: true,
+        // @ts-ignore
+        onError: function(element:any) {
+            var imageSrc = element.data('src');
+            console.log('image "' + imageSrc + '" could not be loaded');
+        }
+
+
+    }); //reload lazy
+    console.log("The real lazy load");
+
+
+}
 
 
 

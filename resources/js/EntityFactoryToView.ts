@@ -1,7 +1,8 @@
 
 import {EntityFactory} from "canonizer/src/EntityFactory.js";
 import {Entity} from "canonizer/src/Entity.js";
-import $ from "jquery";
+import * as $ from "jquery";
+
 
 
 
@@ -63,6 +64,8 @@ export class EntityFactoryToView{
             $("[data-src-data-src-ref]", newField).each(function(){
                 const ref = $(this).data('src-data-src-ref');
                 const value = entity.getRefValue(ref);
+                console.log("helloThisTim entity")
+                console.log(entity);
 
                 $(this).attr('data-src',value);
             });

@@ -18,15 +18,25 @@ mix.webpackConfig({
     },
     externals: [
         "fs",
+
         {
-            xmlhttprequest: '{XMLHttpRequest:XMLHttpRequest}'
+            xmlhttprequest: '{XMLHttpRequest:XMLHttpRequest}',
+
+        },
+        {
+
+            jquery: "jQuery"
         }
+
+
+
+
     ],
 
+
+
     resolve: {
-        alias: {
-            jquery: "./vendor/jquery/jquery.js",
-        }
+
     },
 });
 mix.js('resources/js/app.js', 'public/js')

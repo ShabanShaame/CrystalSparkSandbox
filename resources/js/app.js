@@ -44,7 +44,7 @@ import { EntityFactoryToView } from "./EntityFactoryToView.js";
 var App = /** @class */ (function () {
     function App() {
         var canonizeManager = new CSCanonizeManager();
-        var apiUrl = 'https://localhost:8000/';
+        var apiUrl = 'https://ksmjetski.everdreamsoft.com/';
         try {
             // @ts-ignore
             var cookieUrl = getCookie('apiUrl');
@@ -136,7 +136,9 @@ var App = /** @class */ (function () {
             var eventFactory;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.apiManager.getEvents()];
+                    case 0:
+                        console.log(this.apiManager);
+                        return [4 /*yield*/, this.apiManager.getEvents()];
                     case 1:
                         eventFactory = _a.sent();
                         eventFactory.entityArray = eventFactory.entityArray.slice(0, 10);
@@ -168,5 +170,19 @@ var App = /** @class */ (function () {
     return App;
 }());
 export { App };
-console.log("hello console");
 var app = new App();
+// @ts-ignore
+app.displayCollections().then(lazyload());
+function lazyload() {
+    //we should remove from here
+    // @ts-ignore
+    $('.lazy').Lazy({
+        visibleOnly: true,
+        // @ts-ignore
+        onError: function (element) {
+            var imageSrc = element.data('src');
+            console.log('image "' + imageSrc + '" could not be loaded');
+        }
+    }); //reload lazy
+    console.log("The real lazy load");
+}

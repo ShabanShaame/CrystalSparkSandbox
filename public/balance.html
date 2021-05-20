@@ -3,12 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script charset="UTF-8"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script>
+
+
 </head>
 <body>
 
-Hello balance
+hello
+
+<!-- Posts Grid -->
+<div class="posts posts--cards post-grid post-grid--2cols row sandra-entity-factory collectionFactory">
+
+    <div class=" col-sm-6 sandra-entity">
+        <div class="  card ">
+            <figure class="posts__thumb">
+                <div class="posts__cat">
+
+                </div>
+                <a href="galleryAssetList.html" class="collectionLink" data-ref-name="collectionId"><img height="100" src="" alt="collection image" class="lazy" data-src-data-src-ref="imageUrl" data-src-ref="imageUrl" ></a>
+            </figure>
+            <div class="posts__inner card__content">
+
+                <time  class="posts__date"><span data-ref="collectionId"> Collection Code</span></time>
+                <h6 class="posts__title posts__title--color-hover"><a href="galleryAssetList.html" data-ref-name="collectionId" class="collectionLink"><span data-ref="name">Collection place holder</a></h6>
+                <div class="posts__excerpt">
+                    <span data-ref="description"> The first ever Kusama Collection, link </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+<!-- Post Grid / End -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>
 
+<script type="text/javascript">
+
+
+
+
+
+    const page = 'home';
+    $( document ).ready(function() {
+        console.log("we are going lazy instanciated");
+        $('.lazy').Lazy({
+
+            visibleOnly: true,
+            onError: function(element) {
+                var imageSrc = element.data('src');
+                console.log('image "' + imageSrc + '" could not be loaded');
+            }
+
+
+        }); //reload lazy
+    });
+
+
+
+</script>
