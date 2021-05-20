@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,7 +12,22 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.webpackConfig({
+    node: {
+        fs: "empty"
+    },
+    externals: ["fs"],
+
+    resolve: {
+        alias: {
+            "xmlhttprequest" : "XMLHttpRequest"
+        }
+    },
+});
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
+
+
+

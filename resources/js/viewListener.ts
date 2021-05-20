@@ -1,6 +1,6 @@
 
 import {App} from "./app.js";
-import {CSCanonizeManager} from "../node_module/canonizer/src/canonizer/CSCanonizeManager";
+import {CSCanonizeManager} from "canonizer/src/canonizer/CSCanonizeManager";
 
 var app = new App();
 // @ts-ignore

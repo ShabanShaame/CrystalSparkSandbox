@@ -25,10 +25,14 @@
         "dotenv": "^8.2.0",
         "ethereumjs-tx": "latest",
         "express": "^4.17.1",
+        "fs": "^0.0.1-security",
         "http": "0.0.0",
         "querystring": "^0.2.0",
         "request": "^2.88.0",
         "requestretry": "^2.0.2",
         "web3": "^1.2.7"
+    },
+    "browser": {
+        "child_process": false
     }
 }
