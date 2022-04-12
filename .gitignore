@@ -13,3 +13,6 @@ npm-debug.log
 yarn-error.log
 .idea
 
+/app/Console/Commands/GameAnswers.php
+/app/shaban/
+/app/shaban/
