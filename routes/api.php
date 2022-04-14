@@ -53,30 +53,12 @@ Route::domain('metadata.spellsofgenesis.com')->group(function () {
 
 
 
-Route::get("$basePath/map/", 'CustomLevelsController@getMap');
-Route::post("$basePath/map/", 'CustomLevelsController@setMap');
+
+
+Route::middleware('cors')->get("testgame/people",'TestGameController@getPeople');
 
 
 
-Route::middleware('cors')->get("$basePath/user/get/{addressId}",'UserController@getPublicUserInfo');
-Route::middleware('cors')->get("$basePath/user/{address}/{chain}",'UserController@checkWithAddress');
-Route::middleware('cors')->get("$basePath/user/login/{chain}/{address}/{signature}",'UserController@signInWithAddress');
-Route::middleware('cors')->get("$basePath/user/{address}/app/{appName}/",'UserController@getUserAppData');
-Route::middleware('cors')->post("$basePath/user/batchUpdate",'UserController@batchSetUserAppData');
-Route::middleware('cors')->get("$basePath/user/{address}/verifyApp/{appName}/{signature}",'UserController@verifySignatureForApp');
-Route::middleware('cors')->post("$basePath/user/{address}/reward/{amount}",'UserController@giveReward');
-Route::middleware('cors')->post("$basePath/user/{address}/spend/gold/{amount}",'UserController@executeSpend');
-Route::middleware('cors')->get("$basePath/users/",'UserController@getUsers');
-
-
-
-
-Route::middleware('cors','jwt')->get("$basePath/jwt/",'TransactionsController@getTransfer');
-
-
-Route::middleware('cors','jwt')->get("$basePath/admin/users/",'UserController@getUsers');
-Route::middleware('cors','jwt')->get("$basePath/admin/collections/",'AdminController@getCollections');
-Route::middleware('cors')->post("$basePath/admin/casa/set",'AdminController@setCasa');
 
 
 Route::middleware('cors')->get("$basePath/search/{txString}",'SearchController@search');
@@ -98,14 +80,7 @@ Route::middleware('cors')->post("$basePath/events/{blockchain}/import",'Transact
 Route::middleware('cors')->get("$basePath/events/",'TransactionsController@getEvents');
 Route::middleware('cors')->get("$basePath/eventsRaw/",'TransactionsController@getEventsRaw');
 
-//admin routes
-Route::middleware('cors')->get("$basePath/admin/createLearners/",'AdminController@createLearner');
-Route::middleware('cors')->get("$basePath/admin/collections/build",'AdminController@buildCollectionLearners');
 
-Route::middleware('cors')->get("$basePath/admin/buildShadowEra",'AdminController@buildShadowEra');
-
-
-Route::middleware('cors')->get("$basePath/env/get",'EnvController@getEnv');
 
 
 

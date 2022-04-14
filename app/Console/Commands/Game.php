@@ -140,6 +140,9 @@ class Game extends Command
         $daniela->setBrotherEntity('bornInCity',$zurich,['year'=>1901]);
         $antoine->setBrotherEntity('bornInCity',$paris,['year'=>1902]);
 
+        $antoine->createOrUpdateRef('name','Antonio');
+
+
         $kurt->setBrotherEntity('speak','german',array());
 
 
