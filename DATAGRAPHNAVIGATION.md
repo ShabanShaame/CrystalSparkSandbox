@@ -45,7 +45,7 @@ Two entities are considered "brother" as long as they share the same subject for
 
 Antoine - contained_in_file - peopleFile (Entity)
 
-Antoine - bornInCity - peopleFile (Entity)
+Antoine - bornInCity - Paris (Entity)
 
 The two entities a considered as brother as they share the same subject "Antoine".
 Note even data refer to the same person they are two distict entities.
@@ -87,7 +87,58 @@ XXX - contained_in_file - peopleFile
 #### Read
 In order to load entities we need to use populateLocal method
 
-$peopleFactory->populateLocal()
+`$peopleFactory->populateLocal()`
 
-This will load into memory all entities that are contained_in_file - peopleFile
+This will load into memory all entities that are contained_in_file - peopleFile and have a is_a relation
+
+![](LocalizationGame/load1.png)
+
+`$peopleFactory->dumpMeta()`
+This will return an array of factory data and elements.
+
+`$antoine = $peopleFactory->last('name','Antoine');`
+This will return the last Entity that has "name" Antoine
+
+From there we cannot access the info born in City from our subject antoine
+To be able to access those data we need to load brother entities
+
+![](LocalizationGame/load2.png)
+
+`$peopleFactory->populateBrotherEntities()`
+
+This we can access the born year on the brother entity
+
+        $arrayOfEntities = $antoine->getBrotherEntity('bornInCity');
+
+        //assuming it has a born in city relation
+        if (!empty($arrayOfEntities)){
+            $bornIn = end($arrayOfEntities); //last entity of the array (it may have multiple bornInCity relation
+           echo $bornIn->get('year'); // will return 1902
+        }
+
+Or another way 
+
+    $arrayOfStrings = $antoine->getBrotherReference('bornInCity',null,'year');
+
+#### Joined Factories
+
+We can explore the datagraph by joining factory on target concepts in this case we want to access the city
+name where a person has a bornInCity relation
+
+![](LocalizationGame/load3.png)
+
+    //we create a city factory
+    $cityFactory = new EntityFactory('city','generalCityFile',$sandra);
+
+    //we join the city factory on the bornInCity verb
+
+    $peopleFactory->joinFactory('bornInCity',$cityFactory);
+    $peopleFactory->joinPopulate('bornInCity',$cityFactory);
+
+    $marketa = $peopleFactory->last('name','Marketa');
+    $city = $marketa->getJoinedEntities('bornInCity');
+
+This will return the entity
+
+Praha - contained_in_file - generalCityFile
 
