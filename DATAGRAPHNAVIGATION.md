@@ -1,5 +1,5 @@
 
-For this exercices you will need to use some homebrew methods to go through 
+For this exercises you will need to use some homebrew methods to go through 
 the datagraph.
 
 ####Entity
@@ -64,9 +64,9 @@ it will take the concept subject concept id) For example
 
 Antoine - loves - Antoine
 
-`$antoine->setBrotherEntity($antoine->subjectConcept->idConcept,$antoine,[]);
+`$antoine->setBrotherEntity($antoine->subjectConcept->idConcept,$antoine,[]);`
 
-Antoine - Antoine - Antoine`
+Antoine - Antoine - Antoine
 
 
 
