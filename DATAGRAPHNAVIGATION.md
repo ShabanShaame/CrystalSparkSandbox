@@ -149,14 +149,33 @@ This will return the entity
 Praha - contained_in_file - generalCityFile
 
 
+### Laravel
+
+If you are not familiar with laravel and you would like to just run your code you can 
+use the console command file
+`app/Console/Commands/TestGameExecute.php`
+and run it through the console by doing
+
+`testgame:execute`
+
+you can simply modify the class used to point to your own class namespace
+
+        namespace App\Console\Commands;
+
+        use App\yourNameExercise\MainExercises; //modify
+        use Illuminate\Console\Command;
+
+
+
+
 #### Advices
 
 We are aware that the exercises are advanced in difficulty. Some suggestions
 
-1. For the sake of these exercise we advise you to make a schema of the datagraph on a paper (or else) to clearly see 
+1. For these exercises we advise you to make a schema of the datagraph on a paper (or else) to clearly see 
 the data loaded with populateBrotherEntities and joinPopulate.
    
-2. There are multiple ways of loading part of data of factories to optimize memory usage. But for the sake of these exercise
+2. There are multiple ways of loading part of data of factories to optimize memory usage. But for these exercise
 we advise you load full data systematically. After you instanciate a factory systematically do a
    `$factory->populateLocal()` and `$factory->populateBrotherEntities()` to make sure all data is loaded. If the factory 
    is intended to be joined then do  `$baseFactory->joinFactory('verbToJoin',$joinedFactory)` `$baseFactory->joinPopulate()`
