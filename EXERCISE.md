@@ -110,11 +110,17 @@ Write a script that will return an array of strings of all the cities with their
 
 ###  Exercice 4
 
-This time same as exercice 1 but we pass an entity for favorite language
+This time same as exercise 1 but we pass an entity for favorite language
 it could be a person, a city or a country.
-If a person can be defined directely as speak - language but if not we are looking if the 
+If a person can be defined directly as speak - language but if not we are looking if the 
 person is born in a certain city. Then the city might speak a language. If the city language is not
 defined then we look at the city's country language.
+
+####  Hint
+For this exercice you might need to access the factory of an existing entity. For example to join a factory
+to the parent factory. For this you can just access the factory from an entity by doing
+
+`$entity->factory->joinFactory($verb,$factoryToJoin)`
 
 ##  Typescript
 
