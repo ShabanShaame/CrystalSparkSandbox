@@ -118,7 +118,7 @@ defined then we look at the city's country language.
 
 ##  Typescript
 
-###  Bonus Exercice 5
+###  Bonus Exercise 5
 
 Create a front end application allowing to list the content of localized
 file and allow to modify or add new translations for cities and countries. It should be also possible 
