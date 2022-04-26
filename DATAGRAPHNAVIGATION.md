@@ -149,22 +149,6 @@ This will return the entity
 Praha - contained_in_file - generalCityFile
 
 
-### Laravel
-
-If you are not familiar with laravel and you would like to just run your code you can 
-use the console command file
-`app/Console/Commands/TestGameExecute.php`
-and run it through the console by doing
-
-`testgame:execute`
-
-you can simply modify the class used to point to your own class namespace
-
-        namespace App\Console\Commands;
-
-        use App\yourNameExercise\MainExercises; //modify
-        use Illuminate\Console\Command;
-
 
 
 

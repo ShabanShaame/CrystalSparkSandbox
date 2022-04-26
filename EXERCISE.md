@@ -36,6 +36,9 @@ Take a look at the tables generated and the data structure
 
 ![](LocalizationGame/setup1.png)
 
+
+copy the folder app/yourNameExercise and rename it with your name. Then modify the file for the exercises
+
 ##  SQL
 
 ###  Exercice 1
@@ -52,6 +55,24 @@ From previous query filter in order NOT to display any annoying insect related t
 
 ![](LocalizationGame/sql2.png)
 
+### Laravel
+
+If you are not familiar with laravel and you would like to just run your code you can
+use the console command file
+`app/Console/Commands/TestGameExecute.php`
+and run it through the console by doing
+
+`testgame:execute`
+
+you can simply modify the class used to point to your own class namespace
+
+        namespace App\Console\Commands;
+
+        use App\yourNameExercise\MainExercises; //modify
+        use Illuminate\Console\Command;
+
+
+
 
 ##  PHP
 
@@ -66,7 +87,7 @@ the defined language if available if not we display english localization or the 
 
 ###  Exercice 3
 
-copy the folder app/yourNameExercise and rename it with your name. Then modify the file for the exercises
+
 
 Write a script that will return an array of strings of all the cities with their respective countries
 
@@ -97,7 +118,7 @@ defined then we look at the city's country language.
 
 ##  Typescript
 
-###  Exercice 5
+###  Bonus Exercice 5
 
 Create a front end application allowing to list the content of localized
 file and allow to modify or add new translations for cities and countries. It should be also possible 
@@ -112,6 +133,5 @@ with
 
 It will create a server http://127.0.0.1:8000 where you can create GET and POST requests
 
-look at the 
 
 
