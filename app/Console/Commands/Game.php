@@ -112,12 +112,12 @@ class Game extends Command
         $switzerland->setBrotherEntity('localizedFile','german',['name'=>'Schweiz']);
 
         //put cities in countries
-        $london->setBrotherEntity('locatedIn',$uk,array());
-        $paris->setBrotherEntity('locatedIn',$france,array());
-        $delhi->setBrotherEntity('locatedIn',$india,array());
-        $prague->setBrotherEntity('locatedIn',$czech,array());
-        $geneva->setBrotherEntity('locatedIn',$switzerland,array());
-        $zurich->setBrotherEntity('locatedIn',$switzerland,array());
+        $london->setJoinedEntity('locatedIn',$uk,array());
+        $paris->setJoinedEntity('locatedIn',$france,array());
+        $delhi->setJoinedEntity('locatedIn',$india,array());
+        $prague->setJoinedEntity('locatedIn',$czech,array());
+        $geneva->setJoinedEntity('locatedIn',$switzerland,array());
+        $zurich->setJoinedEntity('locatedIn',$switzerland,array());
 
         //set some country spoken language
         $france->setBrotherEntity('speak','french',array());
@@ -136,9 +136,9 @@ class Game extends Command
         $kurt = $peopleFactory->createNew(['firstName'=>'Kurt']);
 
         //Create born relations
-        $ranjit->setBrotherEntity('bornInCity',$delhi,['year'=>1900]);
-        $daniela->setBrotherEntity('bornInCity',$zurich,['year'=>1901]);
-        $antoine->setBrotherEntity('bornInCity',$paris,['year'=>1902]);
+        $ranjit->setJoinedEntity('bornInCity',$delhi,['year'=>1900]);
+        $daniela->setJoinedEntity('bornInCity',$zurich,['year'=>1901]);
+        $antoine->setJoinedEntity('bornInCity',$paris,['year'=>1902]);
 
         $antoine->createOrUpdateRef('name','Antonio');
 

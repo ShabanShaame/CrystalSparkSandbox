@@ -41,8 +41,18 @@ class TestGameExecute extends Command
 
         $mainExercise = new MainExercises();
 
-        print_r($mainExercise->exercise1());
+       // print_r($mainExercise->exercise1());
 
+        //print_r($mainExercise->exercise2());
+
+
+        //print_r($mainExercise->exercise3('french'));
+       // print_r($mainExercise->exercise3('english'));
+       // print_r($mainExercise->exercise3('german'));
+
+        print_r($mainExercise->exercise4());
+
+       // print_r($mainExercise->exercise2());
 
     }
 }

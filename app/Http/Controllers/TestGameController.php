@@ -23,12 +23,12 @@ class TestGameController extends Controller
 
         $antoine = $peopleFactory->last('firstName','Antoine');
         $arrayOfStrings = $antoine->getBrotherReference('bornInCity',null,'year');
-        dd($arrayOfStrings);
+
 
         //assuming it has a born in city relation
         if (!empty($arrayOfEntities)){
             $bornIn = end($arrayOfEntities); //last entity of the array (it may have multiple bornInCity relation
-           echo $bornIn->get('year'); // will return 1902
+           $bornYear = $bornIn->get('year'); // will return 1902
         }
 
         return $peopleFactory->dumpMeta();

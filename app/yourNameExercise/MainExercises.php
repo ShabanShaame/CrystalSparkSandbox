@@ -53,6 +53,8 @@ class MainExercises
         //create an array with all cities names with their respective countries
         $response[] = "City Name".' - '."Country name";
 
+
+
         return $response ;
 
     }

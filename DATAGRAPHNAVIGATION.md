@@ -39,6 +39,12 @@ It's possible to access triplet data this way
 
 `$antoine->entityId ` Will return the entity id
 
+If you need to get the shortname of a concept for example 'contained_in_file'
+
+`$antoine->verbConcept->getShortname()`
+
+
+
 #### Brother Entity
 
 Two entities are considered "brother" as long as they share the same subject for example
@@ -108,7 +114,7 @@ To be able to access those data we need to load brother entities
 
 This we can access the born year on the brother entity
 
-        $arrayOfEntities = $antoine->getBrotherEntity('bornInCity');
+        $arrayOfEntities = $antoine->getBrotherEntitiesOnVerb('bornInCity');
 
         //assuming it has a born in city relation
         if (!empty($arrayOfEntities)){
@@ -133,7 +139,7 @@ name where a person has a bornInCity relation
     //we join the city factory on the bornInCity verb
 
     $peopleFactory->joinFactory('bornInCity',$cityFactory);
-    $peopleFactory->joinPopulate('bornInCity',$cityFactory);
+    $peopleFactory->joinPopulate();
 
     $marketa = $peopleFactory->last('name','Marketa');
     $city = $marketa->getJoinedEntities('bornInCity');
@@ -141,4 +147,22 @@ name where a person has a bornInCity relation
 This will return the entity
 
 Praha - contained_in_file - generalCityFile
+
+
+#### Advices
+
+We are aware that the exercises are advanced in difficulty. Some suggestions
+
+1. For the sake of these exercise we advise you to make a schema of the datagraph on a paper (or else) to clearly see 
+the data loaded with populateBrotherEntities and joinPopulate.
+   
+2. There are multiple ways of loading part of data of factories to optimize memory usage. But for the sake of these exercise
+we advise you load full data systematically. After you instanciate a factory systematically do a
+   `$factory->populateLocal()` and `$factory->populateBrotherEntities()` to make sure all data is loaded. If the factory 
+   is intended to be joined then do  `$baseFactory->joinFactory('verbToJoin',$joinedFactory)` `$baseFactory->joinPopulate()`
+   `$joinedFactory->populateBrotherEntities()`
+   
+
+
+   
 

@@ -105,3 +105,13 @@ to add new language. We should be able to define new relations for a person a ci
 
 `$kurt->setBrotherEntity('speak','german',array());`
 
+For this exercices you can use Laravel routes controller as API. you can launch an API server
+with 
+
+`php artisan serve`
+
+It will create a server http://127.0.0.1:8000 where you can create GET and POST requests
+
+look at the 
+
+
