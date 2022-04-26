@@ -1,8 +1,8 @@
+# Datagraph navigation general guidance
 
-For this exercises you will need to use some homebrew methods to go through 
-the datagraph.
+For these exercises you will need to use some homebrew methods to go through the datagraph.
 
-####Entity
+## Entity
 
 An entity is defined by the relation of a triple and its associated references.
 For example
@@ -43,9 +43,7 @@ If you need to get the shortname of a concept for example 'contained_in_file'
 
 `$antoine->verbConcept->getShortname()`
 
-
-
-#### Brother Entity
+## Brother Entity
 
 Two entities are considered "brother" as long as they share the same subject for example
 
@@ -58,13 +56,11 @@ Note even data refer to the same person they are two distict entities.
 
 We can create new brother entities from any object of type Entity
 
-set brother entity expect a verb a target and an array of references key values
+"Set brother entity" expects a verb, a target and an array of references key values:
 
 `$antoine->setBrotherEntity('playInstrument','piano',['since'=>1940]);`
 
-Note in general method in sandra core expecting concepts accept parameters that are either
-string (it get or create a concept id with the shortname string) a int (concept id) or an object of type Entity (then 
-it will take the concept subject concept id) For example
+Note in general, methods in sandra core expecting concepts accept parameters that are either string (it gets or creates a concept id with the shortname string), an int (concept id) or an object of type Entity (then it will take the concept subject concept id). For example:
 
 `$antoine->setBrotherEntity('loves',$antoine,[]);`
 
@@ -75,8 +71,9 @@ Antoine - loves - Antoine
 Antoine - Antoine - Antoine
 
 
+## EntityFactory
 
-#### EntityFactory
+### Creation
 
 The entity factories are used to create AND load entities from the datagraph
 
@@ -87,10 +84,7 @@ This factory will create or read people entities everytime with two triplets
 XXX - is_a - person
 XXX - contained_in_file - peopleFile
 
-#### Creation
-
-
-#### Read
+### Read
 In order to load entities we need to use populateLocal method
 
 `$peopleFactory->populateLocal()`
@@ -114,19 +108,22 @@ To be able to access those data we need to load brother entities
 
 This we can access the born year on the brother entity
 
-        $arrayOfEntities = $antoine->getBrotherEntitiesOnVerb('bornInCity');
+```
+$arrayOfEntities = $antoine->getBrotherEntitiesOnVerb('bornInCity');
 
-        //assuming it has a born in city relation
-        if (!empty($arrayOfEntities)){
-            $bornIn = end($arrayOfEntities); //last entity of the array (it may have multiple bornInCity relation
-           echo $bornIn->get('year'); // will return 1902
-        }
+//assuming it has a born in city relation
+if (!empty($arrayOfEntities)){
+    $bornIn = end($arrayOfEntities); //last entity of the array (it may have multiple bornInCity relation
+    echo $bornIn->get('year'); // will return 1902
+}
+```
 
 Or another way 
+```
+$arrayOfStrings = $antoine->getBrotherReference('bornInCity',null,'year');
+```
 
-    $arrayOfStrings = $antoine->getBrotherReference('bornInCity',null,'year');
-
-#### Joined Factories
+## Joined Factories
 
 We can explore the datagraph by joining factory on target concepts in this case we want to access the city
 name where a person has a bornInCity relation
@@ -148,13 +145,9 @@ This will return the entity
 
 Praha - contained_in_file - generalCityFile
 
+## Advices
 
-
-
-
-#### Advices
-
-We are aware that the exercises are advanced in difficulty. Some suggestions
+We are aware that the exercises are advanced in difficulty. Some suggestions:
 
 1. For these exercises we advise you to make a schema of the datagraph on a paper (or else) to clearly see 
 the data loaded with populateBrotherEntities and joinPopulate.
@@ -168,4 +161,3 @@ we advise you load full data systematically. After you instanciate a factory sys
 
 
    
-
